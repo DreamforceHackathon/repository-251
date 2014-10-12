@@ -1,0 +1,295 @@
+user
+user in community
+account_id, assoc, contact, create contact_id
+contact_id create user with profile that has community license
+in that user record there should be a contact_id 
+
+-
+
+account
+id: 001o000000BhQMVAA3
+success: true
+
+contact (bucket account)
+
+{
+    "AccountId" : "001o000000BhQMVAA3",
+    "LastName" : "Smith",
+    "FirstName" : "Jane"
+}
+
+contact id: 003o000000BOoeJAAT
+
+
+user (contact and profile)
+
+ProfileId -> find using: /services/data/v32.0/query?q=SELECT+ID,NAME+FROM+PROFILE+WHERE+NAME+=+'Customer+Community+Plus+User'
+Id: 00eo0000000Oim2AAC
+Name: Customer Community Plus User
+
+
+/services/data/v32.0/sobjects/User/describe
+
+{
+"ContactId":"003o000000BOoeJAAT",
+"ProfileId":"00eo0000000Oim2AAC",
+"Username":"test@test.com",
+"LastName":"TestLastName",
+"Email":"test@test.com",
+"Alias": "My Alias",
+"CommunityNickname": "MyNickname",
+"TimeZoneSidKey":"America/Los_Angeles",
+"LocaleSidKey": "en_US",
+"EmailEncodingKey": "ISO-8859-1",
+"LanguageLocaleKey": "en_US"
+}
+
+/services/data/v32.0/query?q=SELECT+ID,TimeZoneSidKey,LocaleSidKey,EmailEncodingKey,LanguageLocaleKey+FROM+USER
+
+
+user with right profile
+
+
+profile: Customer Community Plus User
+
+--
+
+https://github.com/DreamforceHackathon/repository-251
+
+https://developer.salesforce.com/million-dollar-hackathon?utm_campaign=df14hack&utm_source=email&utm_medium=bma&utm_source=DF14&utm_campaign=5fc1e496fb-Salesforce+1+Million+Hackathon&utm_medium=email&utm_term=0_7928060a84-5fc1e496fb-348944321
+
+Enable partners to find experts, collaborate on deals, and access critical information anywhere.
+
+
+Linkedin Sales Navigator: http://business.linkedin.com/sales-solutions/c/14/6/request-free-demo.html?src=go-pa&trk=sem_lss_gaw_US_Search_Brand_Product%20Features&keyword=+salesforce%20+linkedin&matchtype=b&veh=s7uv3jk7i_pcrid_56854516324_pkw_+salesforce%20+linkedin_pmt_b_pdv_c_&gclid=CK2C3IiYpMECFROTfgodSy8Ahg
+
+
+Ecquire: https://appexchange.salesforce.com/listingDetail?listingId=a0N30000005vHq6EAE (good for importing; not so popular)
+
+
+
+
+Linkedin Sales Navigator: https://appexchange.salesforce.com/listingDetail?listingId=a0N30000004fovtEAA#allReviewsHeader  (too pricey little functionality; bad reviews)
+Page on li: http://business.linkedin.com/sales-solutions/c/14/6/request-free-demo.html?src=go-pa&trk=sem_lss_gaw_US_Search_Brand_Product%20Features&keyword=+salesforce%20+linkedin&matchtype=b&veh=s7uv3jk7i_pcrid_56854516324_pkw_+salesforce%20+linkedin_pmt_b_pdv_c_&gclid=CK2C3IiYpMECFROTfgodSy8Ahg
+
+Price Page: https://www.linkedin.com/mnyfe/subscriptionv2?c=1032&displayProducts=&trk=microsite-sbd_mktg-home-segment-buynow-0&family=sales
+
+
+Sales professionals are increasingly finding value in building their own leads and pipeline through social selling.  On average, social selling leaders enjoy these benefits:
+
+45% more opportunities created
+51% more likely to achieve quota
+80% more productive
+LinkedIn Sales Navigator helps sales professionals be more successful at social selling by leveraging 300M+ professional profiles and 2M+ Company Pages. Major features include:
+
+Designed for Sales User Interface
+TeamLink
+Lead Recommendations
+Premium Search with Lead Builder
+Real-time Sales Update
+See how LinkedIn Sales Navigator can help you. Request a free demo today!
+
+--
+
+http://citruslabs.com/callback/linkedin/
+
+Application Details
+Company:
+
+citruslabs
+
+Application Name:
+
+citruslabs
+
+API Key:
+
+75euo28ldm8dzr
+
+Secret Key:
+
+dEuE7yNFRp0pW6sJ
+
+OAuth User Token:
+
+e9f06485-f6a4-4c49-99b8-1768bc3c9f04
+
+OAuth User Secret:
+
+7f53080e-a01b-4201-b07f-c5834c48d9d8
+
+
+
+--
+
+
+bitcuket
+https://confluence.atlassian.com/display/BITBUCKET/Hackathon+participants
+
+faq: https://developer.salesforce.com/million-dollar-hackathon/2014-faq?
+
+--
+
+sf-console-1
+
+--
+
+https://citruslabs.com/callback/salesforce.php
+
+0.0.1
+
+--
+
+Consumer Key	
+3MVG9xOCXq4ID1uHxIgUDT0Ac13w.izJYcvqGkhexbqDYVPaMvIZdqpfs7mNJsDi8zjBhmxoy8sI2eHeV4gl3
+
+Consumer Secret	
+7315996580954153441
+
+
+client_id is the Consumer Key
+client_secret is the Consumer Secret
+redirect_uri is the Callback URL.
+
+
+curl --data client_id=3MVG9xOCXq4ID1uHxIgUDT0Ac13w.izJYcvqGkhexbqDYVPaMvIZdqpfs7mNJsDi8zjBhmxoy8sI2eHeV4gl3 \
+     --data client_secret=7315996580954153441 \
+     --data grant_type=password \
+     --data username=amir.youssefi@gmail.com \
+     --data password=pass1234dciHSYAMRVEAWjVx3FmTU2bew \
+      https://login.salesforce.com/services/oauth2/token
+
+
+{"id":"https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK","issued_at":"1413125686702","token_type":"Bearer","instance_url":"https://na17.salesforce.com","signature":"5hieI6ijaF1htfaNwE0mwz8rj7TTKCz9Itw6dh3HTyg=","access_token":"00Do0000000ckDE!AQEAQJb9jiWu2W8PxAYF7jshtAjypnn9wjuobPUs2GqgJqDru.POxM_sDs2xmSCIT5a3azUcu_I7Yv0w4_otTTwHdW_PINsu"}
+
+curl -H 'Authorization: Bearer 00Do0000000ckDE!AQEAQJb9jiWu2W8PxAYF7jshtAjypnn9wjuobPUs2GqgJqDru.POxM_sDs2xmSCIT5a3azUcu_I7Yv0w4_otTTwHdW_PINsu' \
+-H "Content-Type: application/json" \
+https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK
+
+// https://na1.salesforce.com/services/data/v20.0/sobjects/Account/
+// https://na1.salesforce.com/services/data/v32.0/chatter/users/me 
+
+curl -H 'Authorization: Bearer 00Do0000000ckDE!AQEAQJb9jiWu2W8PxAYF7jshtAjypnn9wjuobPUs2GqgJqDru.POxM_sDs2xmSCIT5a3azUcu_I7Yv0w4_otTTwHdW_PINsu' \
+> -H "Content-Type: application/json" \
+> https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK
+{"id":"https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK","asserted_user":true,"user_id":"005o0000001ByBaAAK","organization_id":"00Do0000000ckDEEAY","username":"amir.youssefi@gmail.com","nick_name":"amir.youssefi1.413007400919069E12","display_name":"Amir Youssefi","email":"amir.youssefi@gmail.com","email_verified":true,"first_name":"Amir","last_name":"Youssefi","timezone":"America/Los_Angeles","photos":{"picture":"https://c.na17.content.force.com/profilephoto/005/F","thumbnail":"https://c.na17.content.force.com/profilephoto/005/T"},"addr_street":null,"addr_city":null,"addr_state":null,"addr_country":"US","addr_zip":"94107","mobile_phone":null,"mobile_phone_verified":false,"status":{"created_date":null,"body":null},"urls":{"enterprise":"https://na17.salesforce.com/services/Soap/c/{version}/00Do0000000ckDE","metadata":"https://na17.salesforce.com/services/Soap/m/{version}/00Do0000000ckDE","partner":"https://na17.salesforce.com/services/Soap/u/{version}/00Do0000000ckDE","rest":"https://na17.salesforce.com/services/data/v{version}/","sobjects":"https://na17.salesforce.com/services/data/v{version}/sobjects/","search":"https://na17.salesforce.com/services/data/v{version}/search/","query":"https://na17.salesforce.com/services/data/v{version}/query/","recent":"https://na17.salesforce.com/services/data/v{version}/recent/","profile":"https://na17.salesforce.com/005o0000001ByBaAAK","feeds":"https://na17.salesforce.com/services/data/v{version}/chatter/feeds","groups":"https://na17.salesforce.com/services/data/v{version}/chatter/groups","users":"https://na17.salesforce.com/services/data/v{version}/chatter/users","feed_items":"https://na17.salesforce.com/services/data/v{version}/chatter/feed-items"},"active":true,"user_type":"STANDARD","language":"en_US","locale":"en_US","utcOffset":-28800000,"last_modified_date":"2014-10-11T06:03:14.000+0000","is_app_installed":true}
+
+
+curl -H 'Authorization: Bearer 00Do0000000ckDE!AQEAQJb9jiWu2W8PxAYF7jshtAjypnn9wjuobPUs2GqgJqDru.POxM_sDs2xmSCIT5a3azUcu_I7Yv0w4_otTTwHdW_PINsu' \
+-H "Content-Type: application/json" \
+https://na1.salesforce.com/services/data/
+[{"label":"Winter '11","url":"/services/data/v20.0","version":"20.0"},{"label":"Spring '11","url":"/services/data/v21.0","version":"21.0"},{"label":"Summer '11","url":"/services/data/v22.0","version":"22.0"},{"label":"Winter '12","url":"/services/data/v23.0","version":"23.0"},{"label":"Spring '12","url":"/services/data/v24.0","version":"24.0"},{"label":"Summer '12","url":"/services/data/v25.0","version":"25.0"},{"label":"Winter '13","url":"/services/data/v26.0","version":"26.0"},{"label":"Spring '13","url":"/services/data/v27.0","version":"27.0"},{"label":"Summer '13","url":"/services/data/v28.0","version":"28.0"},{"label":"Winter '14","url":"/services/data/v29.0","version":"29.0"},{"label":"Spring '14","url":"/services/data/v30.0","version":"30.0"},{"label":"Summer '14","url":"/services/data/v31.0","version":"31.0"},{"label":"Winter '15","url":"/services/data/v32.0","version":"32.0"}]
+
+curl -H 'Authorization: Bearer 00Do0000000ckDE!AQEAQJb9jiWu2W8PxAYF7jshtAjypnn9wjuobPUs2GqgJqDru.POxM_sDs2xmSCIT5a3azUcu_I7Yv0w4_otTTwHdW_PINsu' \
+-H "X-PrettyPrint:1" \
+https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK
+
+
+curl -H 'Authorization: Bearer 00Do0000000ckDE!AQEAQJb9jiWu2W8PxAYF7jshtAjypnn9wjuobPUs2GqgJqDru.POxM_sDs2xmSCIT5a3azUcu_I7Yv0w4_otTTwHdW_PINsu' \
+-H "Content-Type: application/json" \
+-H "X-PrettyPrint:1" \
+https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK/services/data/v20.0/sobjects/
+
+curl -H 'Authorization: Bearer 00Do0000000ckDE!AQEAQJb9jiWu2W8PxAYF7jshtAjypnn9wjuobPUs2GqgJqDru.POxM_sDs2xmSCIT5a3azUcu_I7Yv0w4_otTTwHdW_PINsu' \
+-H "Content-Type: application/json" \
+-H "X-PrettyPrint:1" \
+https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK/services/data/v28.0/sobjects/Account/quickActions
+
+curl -H 'Authorization: Bearer 00Do0000000ckDE!AQEAQJb9jiWu2W8PxAYF7jshtAjypnn9wjuobPUs2GqgJqDru.POxM_sDs2xmSCIT5a3azUcu_I7Yv0w4_otTTwHdW_PINsu' \
+-H "Content-Type: application/json" \
+-H "X-PrettyPrint:1" \
+-d @newcontact.json \
+https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK/services/data/v28.0/sobjects/Account/quickActions/CreateContact
+
+
+--
+
+initParams = { 
+    @WebInitParam(name = "clientId", value = 
+            "3MVG9lKcPoNINVBJSoQsNCD.HHDdbugPsNXwwyFbgb47KWa_PTv"),
+    @WebInitParam(name = "clientSecret", value = "5678471853609579508"),
+    @WebInitParam(name = "redirectUri", value = 
+            "https://localhost:8443/RestTest/oauth/_callback"),
+    @WebInitParam(name = "environment", value = 
+            "https://na1.salesforce.com/services/oauth2/token")  }
+ 
+HttpClient httpclient = new HttpClient();
+PostMethod post = new PostMethod(environment);
+post.addParameter("code",code);
+post.addParameter("grant_type","authorization_code");
+
+   /** For session ID instead of OAuth 2.0, use "grant_type", "password" **/
+post.addParameter("client_id",clientId);
+post.addParameter("client_secret",clientSecret);
+post.addParameter("redirect_uri",redirectUri);
+
+curl -X POST https://na1.salesforce.com/services/oauth2/token --data "grant_type=authorization_code&response_type=code&redirect_uri=https://aspirie.com/p/salesforce/callback.php&client_secret=7315996580954153441&client_id=3MVG9xOCXq4ID1uHxIgUDT0Ac13w.izJYcvqGkhexbqDYVPaMvIZdqpfs7mNJsDi8zjBhmxoy8sI2eHeV4gl3"
+
+
+curl -X POST https://na1.salesforce.com/services/oauth2/token --data "grant_type=password&redirect_uri=https://aspirie.com/p/salesforce/callback.php&client_secret=7315996580954153441&client_id=3MVG9xOCXq4ID1uHxIgUDT0Ac13w.izJYcvqGkhexbqDYVPaMvIZdqpfs7mNJsDi8zjBhmxoy8sI2eHeV4gl3"
+
+curl --form client_id=3MVG9xOCXq4ID1uHxIgUDT0Ac13w.izJYcvqGkhexbqDYVPaMvIZdqpfs7mNJsDi8zjBhmxoy8sI2eHeV4gl3 \
+     --form client_secret=7315996580954153441 \
+     --form grant_type=authorization_code \
+     --form username=amir.youssefi@gmail.com \
+     --form password=pass1234 \
+      https://login.salesforce.com/services/oauth2/token
+
+
+
+---
+
+curl https://na1.salesforce.com/services/data/v20.0/sobjects/Account/ -H "Authorization: Bearer token -H "Content-Type: application/json" -d "@newaccount.json"
+
+--
+
+{
+  "id" : "https://login.salesforce.com/id/00Do0000000ckDEEAY/005o0000001ByBaAAK",
+  "asserted_user" : true,
+  "user_id" : "005o0000001ByBaAAK",
+  "organization_id" : "00Do0000000ckDEEAY",
+  "username" : "amir.youssefi@gmail.com",
+  "nick_name" : "amir.youssefi1.413007400919069E12",
+  "display_name" : "Amir Youssefi",
+  "email" : "amir.youssefi@gmail.com",
+  "email_verified" : true,
+  "first_name" : "Amir",
+  "last_name" : "Youssefi",
+  "timezone" : "America/Los_Angeles",
+  "photos" : {
+    "picture" : "https://c.na17.content.force.com/profilephoto/005/F",
+    "thumbnail" : "https://c.na17.content.force.com/profilephoto/005/T"
+  },
+  "addr_street" : null,
+  "addr_city" : null,
+  "addr_state" : null,
+  "addr_country" : "US",
+  "addr_zip" : "94107",
+  "mobile_phone" : null,
+  "mobile_phone_verified" : false,
+  "status" : {
+    "created_date" : null,
+    "body" : null
+  },
+  "urls" : {
+    "enterprise" : "https://na17.salesforce.com/services/Soap/c/{version}/00Do0000000ckDE",
+    "metadata" : "https://na17.salesforce.com/services/Soap/m/{version}/00Do0000000ckDE",
+    "partner" : "https://na17.salesforce.com/services/Soap/u/{version}/00Do0000000ckDE",
+    "rest" : "https://na17.salesforce.com/services/data/v{version}/",
+    "sobjects" : "https://na17.salesforce.com/services/data/v{version}/sobjects/",
+    "search" : "https://na17.salesforce.com/services/data/v{version}/search/",
+    "query" : "https://na17.salesforce.com/services/data/v{version}/query/",
+    "recent" : "https://na17.salesforce.com/services/data/v{version}/recent/",
+    "profile" : "https://na17.salesforce.com/005o0000001ByBaAAK",
+    "feeds" : "https://na17.salesforce.com/services/data/v{version}/chatter/feeds",
+    "groups" : "https://na17.salesforce.com/services/data/v{version}/chatter/groups",
+    "users" : "https://na17.salesforce.com/services/data/v{version}/chatter/users",
+    "feed_items" : "https://na17.salesforce.com/services/data/v{version}/chatter/feed-items"
+  },
+  "active" : true,
+  "user_type" : "STANDARD",
+  "language" : "en_US",
+  "locale" : "en_US",
+  "utcOffset" : -28800000,
+  "last_modified_date" : "2014-10-11T06:03:14.000+0000",
+  "is_app_installed" : true
